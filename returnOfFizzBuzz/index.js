@@ -16,11 +16,11 @@ function fizzBuzz(countTo) {
   return response;
 }
 
-function main() {
+function main() {  
   $('.js-form').submit(function(event) {
     event.preventDefault();
+    $('.js-results').empty();    
     const userTextElement = $(event.currentTarget).find('#number-choice');
-    console.log(`Input is ${userTextElement.val()}`);
     const seqArray = fizzBuzz(`${userTextElement.val()}`);
 
     seqArray.forEach(function (elem) {
